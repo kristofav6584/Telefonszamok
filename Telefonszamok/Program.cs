@@ -118,7 +118,12 @@ namespace Telefonszamok
             }
             else if (valaszt == "7")
             {
-                //7
+                Console.Clear();
+                foreach (var telefonszam in telefonszamok)
+                {
+                    if (telefonszam[0] == '0' && telefonszam[1] == '6')
+               Console.WriteLine(telefonszam); 
+                }
             }
             else if (valaszt == "8")
             {
