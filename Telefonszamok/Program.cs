@@ -1,4 +1,6 @@
-﻿namespace Telefonszamok
+﻿using System.Threading.Tasks.Dataflow;
+
+namespace Telefonszamok
 {
     internal class Program
     {
@@ -64,7 +66,20 @@
             }
             else if (valaszt == "4")
             {
-                //4
+                Console.Clear();
+                foreach (var telefonszam in telefonszamok)
+                {
+                    bool megfelelo = true;
+                    foreach (var szamjegyek in telefonszam)
+                    {
+                        if (!char.IsDigit(szamjegyek) && szamjegyek != '+')
+                        {
+                            megfelelo = false;
+                        }
+                    }
+                    if (megfelelo)
+                        Console.WriteLine(telefonszam);
+                }
             }
             else if (valaszt == "5")
             {
