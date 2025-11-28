@@ -93,7 +93,28 @@ namespace Telefonszamok
             }
             else if (valaszt == "6")
             {
-                
+                Console.Clear();
+                foreach (String telefonszam in telefonszamok)
+                {
+                    bool megfelelo = true;
+                    for (int i = 0; i < telefonszam.Length; i++)
+                    {
+                        if (i == 0)
+                        {
+                            if (!char.IsNumber(telefonszam[i]) && telefonszam[i] != '+')
+                                megfelelo = false;
+
+
+                        }
+                        else
+                        {
+                            if (!char.IsNumber(telefonszam[i]))
+                                megfelelo = false;
+                        }
+                    }
+                    if (megfelelo)
+                        Console.WriteLine(telefonszam);
+                }
             }
             else if (valaszt == "7")
             {
