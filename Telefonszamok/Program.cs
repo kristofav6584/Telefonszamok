@@ -72,7 +72,7 @@ namespace Telefonszamok
                     bool megfelelo = true;
                     foreach (var szamjegyek in telefonszam)
                     {
-                        if (!char.IsDigit(szamjegyek) && szamjegyek != '+')
+                        if (!char.IsNumber(szamjegyek) && szamjegyek != '+')
                         {
                             megfelelo = false;
                         }
@@ -83,11 +83,17 @@ namespace Telefonszamok
             }
             else if (valaszt == "5")
             {
-                //5
+                Console.Clear();
+
+                foreach (var telefonszam in telefonszamok)
+                {
+                    if (telefonszam.Contains('6'))
+                        Console.WriteLine(telefonszam);
+                }
             }
             else if (valaszt == "6")
             {
-                //6
+                
             }
             else if (valaszt == "7")
             {
