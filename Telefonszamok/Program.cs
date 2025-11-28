@@ -4,6 +4,14 @@
     {
         static void Main(string[] args)
         {
+            List<string> telefonszamok = new List<string>();
+
+            telefonszamok.Add("+36202275895");
+            telefonszamok.Add("06203568987");
+            telefonszamok.Add("(06)20/2558222");
+            telefonszamok.Add("203568978+");
+            telefonszamok.Add("nullahat202289578548");
+
             Console.Clear();
             Console.WriteLine("0. Kilépés");
             Console.WriteLine("1. Mindent megjelenít");
@@ -22,7 +30,11 @@
             }
             else if (valaszt == "1")
             {
-                //1
+                Console.Clear();
+                foreach (String szamok in telefonszamok)
+                {
+                    Console.WriteLine(szamok);
+                }
             }
             else if (valaszt == "2")
             {
@@ -52,7 +64,11 @@
             {
                 //8
             }
-            Console.ReadKey();
+            else
+            {
+                Console.WriteLine("Nincs ilyen parancs");
+            }
+                Console.ReadKey();
         }
     }
 }
