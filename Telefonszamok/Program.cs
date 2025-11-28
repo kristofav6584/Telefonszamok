@@ -38,7 +38,18 @@
             }
             else if (valaszt == "2")
             {
-                //2
+                Console.Clear();
+                foreach (var szamok in telefonszamok)
+                {
+                    bool jo = true;
+                    foreach (char szam in szamok)
+                    {
+                        if (char.IsLetter(szam))
+                            jo = false;
+                    }
+                    if (jo)
+                        Console.WriteLine(szamok);
+                }
             }
             else if (valaszt == "3")
             {
