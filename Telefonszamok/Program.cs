@@ -53,7 +53,14 @@
             }
             else if (valaszt == "3")
             {
-                //3
+                Console.Clear();
+                foreach(var telefonszam in telefonszamok)
+                {
+                    if (telefonszam.Length == 12)
+                    {
+                        Console.WriteLine(telefonszam);
+                    }
+                }
             }
             else if (valaszt == "4")
             {
